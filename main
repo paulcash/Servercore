@@ -13,7 +13,7 @@ import org.spongepowered.api.event.state.ServerStartingEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
 
-@Plugin(id = "36651", name = "ServerCore-Main", version="0.25")
+@Plugin(id = "76453846", name = "ServerCore", version="0.25")
 public class main{
 
  
@@ -56,7 +56,38 @@ public class main{
 		   
 		
 	    }
+	@SpongeEventHandler
+    public void chatb42ot1(AsyncPlayerChatEvent event) {
+	   if(event.getMessage().equalsIgnoreCase("list"));
+   event.getPlayer().sendMessage("Hello " + event.getPlayer() + " These are the online players" + event.getGame().getOnlinePlayers());
 	   
+	   
+	
+    }
+   
+	@SpongeEventHandler
+    public void chat321bot1(AsyncPlayerChatEvent event) {
+	   if(event.getMessage().equalsIgnoreCase("health"));
+   event.getPlayer().sendMessage("your health is: " + event.getPlayer().getHealth());
+	   
+	   
+	
+    }
+	@SpongeEventHandler
+    public void chat76bot1(AsyncPlayerChatEvent event) {
+	   if(event.getMessage().equalsIgnoreCase("cords"));
+   event.getPlayer().sendMessage("X:  " + event.getPlayer().getX() + " Y:" + event.getPlayer().getY() + "  Z:" + event.getPlayer().getZ());
+	   
+	   
+	
+    }
+   
+	
+	
+	
+	
+	
+	
 	   @SpongeEventHandler
 	    public void chatbot2(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("how do i get to the nether?"));
@@ -75,9 +106,9 @@ public class main{
 		   event.getPlayer().sendMessage("About to die? type (heal) in chat ");
 		   event.getPlayer().sendMessage("Want the server version? type (version) in chat");
 		   event.getPlayer().sendMessage("type (Help me) to recieve kinda help");		   event.getPlayer().sendMessage("Current Commands: ");
-		   event.getPlayer().sendMessage("Current Commands: ");
-		   event.getPlayer().sendMessage("Current Commands: ");
-		   event.getPlayer().sendMessage("Current Commands: ");
+		   event.getPlayer().sendMessage("list players (list)");
+		   event.getPlayer().sendMessage("get health (health)");
+		   event.getPlayer().sendMessage("cords get your x,y,z (cords)");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   
@@ -269,6 +300,43 @@ if(game.getPluginManager().getPlugins().contains("ServerCore"));
 logger.info("ServerCore Loaded and working");
 
 }
+
+
+
+
+
+@SpongeEventHandler
+public void on545Disab234le(ServerStartedEvent event) {
+
+if(game.getPluginManager().getPlugins().contains("Essentials"));
+logger.info("Essentials Found Starting hook in...");
+logger.info("Hooked into essentials Added [12] Features");
+
+
+	
+	
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+}
+
+
 
 
 
