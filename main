@@ -13,7 +13,7 @@ import org.spongepowered.api.event.state.ServerStartingEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
 
-@Plugin(id = "Randomid", name = "ServerCore-Events", version="0.1")
+@Plugin(id = "36651", name = "ServerCore-Main", version="0.25")
 public class main{
 
  
