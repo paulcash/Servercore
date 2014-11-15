@@ -4,16 +4,19 @@ import java.util.logging.Logger;
 
 import org.spongepowered.api.Game;
 import org.spongepowered.api.entity.Player;
-import org.spongepowered.api.event.SpongeEventHandler;
+import org.spongepowered.api.event.Subscribe;
 import org.spongepowered.api.event.entity.EntitySpawnEvent;
 import org.spongepowered.api.event.player.AsyncPlayerChatEvent;
+import org.spongepowered.api.event.player.PlayerEvent;
 import org.spongepowered.api.event.state.PreInitializationEvent;
 import org.spongepowered.api.event.state.ServerStartedEvent;
 import org.spongepowered.api.event.state.ServerStartingEvent;
 import org.spongepowered.api.event.state.ServerStoppingEvent;
 import org.spongepowered.api.plugin.Plugin;
+import org.spongepowered.api.util.command.CommandCallable;
 
-@Plugin(id = "76453846", name = "ServerCore", version="0.25")
+
+@Plugin(id = "Randomid", name = "ServerCore-Events", version="0.1")
 public class main{
 
  
@@ -48,7 +51,7 @@ public class main{
 	private Player player;
 
 
-	@SpongeEventHandler
+	@Subscribe
 	    public void chatbot1(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().equalsIgnoreCase("Hello"));
 	   event.getPlayer().sendMessage("Hello");
@@ -56,39 +59,8 @@ public class main{
 		   
 		
 	    }
-	@SpongeEventHandler
-    public void chatb42ot1(AsyncPlayerChatEvent event) {
-	   if(event.getMessage().equalsIgnoreCase("list"));
-   event.getPlayer().sendMessage("Hello " + event.getPlayer() + " These are the online players" + event.getGame().getOnlinePlayers());
 	   
-	   
-	
-    }
-   
-	@SpongeEventHandler
-    public void chat321bot1(AsyncPlayerChatEvent event) {
-	   if(event.getMessage().equalsIgnoreCase("health"));
-   event.getPlayer().sendMessage("your health is: " + event.getPlayer().getHealth());
-	   
-	   
-	
-    }
-	@SpongeEventHandler
-    public void chat76bot1(AsyncPlayerChatEvent event) {
-	   if(event.getMessage().equalsIgnoreCase("cords"));
-   event.getPlayer().sendMessage("X:  " + event.getPlayer().getX() + " Y:" + event.getPlayer().getY() + "  Z:" + event.getPlayer().getZ());
-	   
-	   
-	
-    }
-   
-	
-	
-	
-	
-	
-	
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbot2(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("how do i get to the nether?"));
 	   event.getPlayer().sendMessage("Hello" + event.getPlayer() + ", You need obsidian to build a nether portal! Mine to get obsidian");
@@ -98,7 +70,7 @@ public class main{
 		 player = event.getPlayer();
 	    } 
 	   
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbot3(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("chatbot"));
 	   event.getPlayer().sendMessage("Hey " + event.getPlayer() + " How may i assist you?");
@@ -106,9 +78,9 @@ public class main{
 		   event.getPlayer().sendMessage("About to die? type (heal) in chat ");
 		   event.getPlayer().sendMessage("Want the server version? type (version) in chat");
 		   event.getPlayer().sendMessage("type (Help me) to recieve kinda help");		   event.getPlayer().sendMessage("Current Commands: ");
-		   event.getPlayer().sendMessage("list players (list)");
-		   event.getPlayer().sendMessage("get health (health)");
-		   event.getPlayer().sendMessage("cords get your x,y,z (cords)");
+		   event.getPlayer().sendMessage("Current Commands: ");
+		   event.getPlayer().sendMessage("Current Commands: ");
+		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   
@@ -116,7 +88,7 @@ public class main{
 	   
 	
 	   
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbot23(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("heal"));
 	   event.getPlayer().setHealth(25);
@@ -129,7 +101,7 @@ public class main{
 
 
 	   
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbot2t(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("version"));
 	   event.getPlayer().sendMessage("Version: " + event.getGame().getAPIVersion());
@@ -140,7 +112,7 @@ public class main{
 	   
 
 	 
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbo4214t2t(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("hey chatbot"));
 	   event.getPlayer().sendMessage("What " + event.getPlayer() + " ??!");
@@ -149,7 +121,7 @@ public class main{
 		   
 	    } 
 	   
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbo32214t2t(ServerStoppingEvent event) {
 		   event.getGame().broadcastMessage("Great you broke it!");
 
@@ -157,7 +129,7 @@ public class main{
 	
 	   }
 				   
-	   @SpongeEventHandler
+	   @Subscribe
 	    public void chatbo42645614t2t(AsyncPlayerChatEvent event) {
 		   if(event.getMessage().contains("/chatbot"));
 		   
@@ -166,7 +138,7 @@ public class main{
 	    } 
 	   		   
 	   
-@SpongeEventHandler
+@Subscribe
 public void chatbo426432355614t2t(AsyncPlayerChatEvent event) {
 if(event.getMessage().contains("help me"));
 	event.getPlayer().sendMessage("What what happened Why are you yelling at me! Siriously take it up with the admin not the chatbot!");
@@ -174,7 +146,7 @@ if(event.getMessage().contains("help me"));
 
 } 
 	   
-@SpongeEventHandler
+@Subscribe
 public void chatbo426432362454555614t2t(AsyncPlayerChatEvent event) {
 if(event.getMessage().contains("plugin"));
 	event.getPlayer().sendMessage("This server is running with ServerCore version (0.5) ");
@@ -183,7 +155,7 @@ if(event.getMessage().contains("plugin"));
 } 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo4264323556ryete14t2t(AsyncPlayerChatEvent event) {
 if(event.getMessage().contains("hell"));
 	event.getPlayer().sendMessage("DO NOT CURSE");
@@ -198,7 +170,7 @@ if(event.getMessage().contains("hell"));
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo426432353451355614t2t(AsyncPlayerChatEvent event) {
 if(event.getMessage().contains("test"));
 	event.getPlayer().clearTitle();
@@ -209,7 +181,7 @@ event.getPlayer().damage(1);
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo4264323534513551614t2t(AsyncPlayerChatEvent event) {
 if(event.getMessage().contains("verify me"));
 	
@@ -226,24 +198,22 @@ event.getPlayer().damage(1);
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo4264323532534513551614t2t(ServerStartingEvent event) {
 
 
 	
 	logger.info("Loading...");
-	logger.info("[ServerCore] Loaded And running");
-	
-	
-	
-	
-	
+	logger.info("[ServerCore] Running try events");
+	logger.info("[Servercore] Version 1.0 has found sponge version: " + event.getGame().getAPIVersion() + " Trying to hook in...");
+	logger.info("[Servercore] API  Has hooked in to sponge");
+
 }
 
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo426432353253451355161dfg4t2t(PreInitializationEvent event) {
 
 
@@ -251,7 +221,6 @@ public void chatbo426432353253451355161dfg4t2t(PreInitializationEvent event) {
 	logger = event.getPluginLog();
 	
 	
-			
 	
 	
 	
@@ -263,7 +232,7 @@ public void chatbo426432353253451355161dfg4t2t(PreInitializationEvent event) {
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void chatbo426432353q6432534513551614t2t(EntitySpawnEvent event) {
 
 
@@ -278,7 +247,7 @@ public void chatbo426432353q6432534513551614t2t(EntitySpawnEvent event) {
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void onDisable(ServerStoppingEvent event) {
 
 logger.info("ServerCore has been disabled");
@@ -293,7 +262,7 @@ logger.info("ServerCore has been disabled");
 
 
 
-@SpongeEventHandler
+@Subscribe
 public void onDisab234le(ServerStartedEvent event) {
 
 if(game.getPluginManager().getPlugins().contains("ServerCore"));
@@ -304,20 +273,6 @@ logger.info("ServerCore Loaded and working");
 
 
 
-
-@SpongeEventHandler
-public void on545Disab234le(ServerStartedEvent event) {
-
-if(game.getPluginManager().getPlugins().contains("Essentials"));
-logger.info("Essentials Found Starting hook in...");
-logger.info("Hooked into essentials Added [12] Features");
-
-
-	
-	
-
-
-}
 
 
 
