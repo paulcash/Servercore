@@ -48,78 +48,44 @@ public class main{
 //Ahead is the code for the servercore chatbot	
 
 	   @SuppressWarnings("unused")
-	private Player player;
+	
 
 
-	@Subscribe
-	    public void chatbot1(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().equalsIgnoreCase("Hello"));
-	   event.getPlayer().sendMessage("Hello");
-		   
-		   
-		
-	    }
-	   
-	   @Subscribe
-	    public void chatbot2(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("how do i get to the nether?"));
-	   event.getPlayer().sendMessage("Hello" + event.getPlayer() + ", You need obsidian to build a nether portal! Mine to get obsidian");
-		   
-		   
-		  
-		 player = event.getPlayer();
-	    } 
-	   
-	   @Subscribe
-	    public void chatbot3(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("chatbot"));
-	   event.getPlayer().sendMessage("Hey " + event.getPlayer() + " How may i assist you?");
+@Subscribe
+public void onChatEvent(AsyncPlayerChatEvent event) {
+String message = event.getMessage();
+Player player = event.getPlayer();
+if(message.equalsIgnoreCase("Hello")) {
+player.sendMessage("Hello");
+} else if(message.contains("How do I get to the nether?")) {
+player.sendMessage("Hello" + player.getName() + "! You need obsidian to build a nether portal! Mine to get obsidian!");
+} else if(message.contains("help")) {
+	       event.getPlayer().sendMessage("Hey " + event.getPlayer() + " How may i assist you?");
 		   event.getPlayer().sendMessage("Need help with the nether? type (how do i get to the nether )in chat ");
 		   event.getPlayer().sendMessage("About to die? type (heal) in chat ");
 		   event.getPlayer().sendMessage("Want the server version? type (version) in chat");
-		   event.getPlayer().sendMessage("type (Help me) to recieve kinda help");		   event.getPlayer().sendMessage("Current Commands: ");
+		   event.getPlayer().sendMessage("type (Help me) to recieve kinda help");		   
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
 		   event.getPlayer().sendMessage("Current Commands: ");
-		   
-	    }
-	   
-	
-	   
-	   @Subscribe
-	    public void chatbot23(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("heal"));
-	   event.getPlayer().setHealth(25);
-		   player = event.getPlayer();
-		   
-		   
-	    } 
-	   
+	   } else if(message.contains("heal")) {
+		   player.setHealth(20);
+	   } else if(message.contains("version")) {
+		   player.sendMessage("Version " + event.getGame().getAPIVersion());
+	   } else if(message.contains("chatbot")) {
 
-
-
-	   
-	   @Subscribe
-	    public void chatbot2t(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("version"));
-	   event.getPlayer().sendMessage("Version: " + event.getGame().getAPIVersion());
-		   
-		   
-		   
-	    } 
-	   
-
-	 
-	   @Subscribe
-	    public void chatbo4214t2t(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("hey chatbot"));
 	   event.getPlayer().sendMessage("What " + event.getPlayer() + " ??!");
+	   } else if(message.contains("help me")) {
+			event.getPlayer().sendMessage("What what happened Why are you yelling at me! Siriously take it up with the admin not the chatbot!");
+	   } else if(message.contains("servercore")) {
+		   player.sendMessage("Servercore version 0.5");
+
+	   }
 		   
 		   
-		   
-	    } 
+	   }
 	   
 	   @Subscribe
 	    public void chatbo32214t2t(ServerStoppingEvent event) {
@@ -129,66 +95,10 @@ public class main{
 	
 	   }
 				   
-	   @Subscribe
-	    public void chatbo42645614t2t(AsyncPlayerChatEvent event) {
-		   if(event.getMessage().contains("/chatbot"));
-		   
-		   
-		   
-	    } 
-	   		   
-	   
-@Subscribe
-public void chatbo426432355614t2t(AsyncPlayerChatEvent event) {
-if(event.getMessage().contains("help me"));
-	event.getPlayer().sendMessage("What what happened Why are you yelling at me! Siriously take it up with the admin not the chatbot!");
-
-
-} 
-	   
-@Subscribe
-public void chatbo426432362454555614t2t(AsyncPlayerChatEvent event) {
-if(event.getMessage().contains("plugin"));
-	event.getPlayer().sendMessage("This server is running with ServerCore version (0.5) ");
-
-
-} 
-
-
-@Subscribe
-public void chatbo4264323556ryete14t2t(AsyncPlayerChatEvent event) {
-if(event.getMessage().contains("hell"));
-	event.getPlayer().sendMessage("DO NOT CURSE");
-	event.getPlayer().sendMessage("DO NOT CURSE");
-
-
-} 
-	
+   
 
 
 
-
-
-
-@Subscribe
-public void chatbo426432353451355614t2t(AsyncPlayerChatEvent event) {
-if(event.getMessage().contains("test"));
-	event.getPlayer().clearTitle();
-event.getPlayer().damage(1);
-
-} 
-	
-
-
-
-@Subscribe
-public void chatbo4264323534513551614t2t(AsyncPlayerChatEvent event) {
-if(event.getMessage().contains("verify me"));
-	
-event.getPlayer().damage(1);
-
-} 
-	
 
 
 
@@ -218,7 +128,7 @@ public void chatbo426432353253451355161dfg4t2t(PreInitializationEvent event) {
 
 
 	game = event.getGame();
-	logger = event.getPluginLog();
+	
 	
 	
 	
@@ -269,23 +179,6 @@ if(game.getPluginManager().getPlugins().contains("ServerCore"));
 logger.info("ServerCore Loaded and working");
 
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
