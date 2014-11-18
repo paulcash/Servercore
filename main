@@ -1,5 +1,6 @@
 package main;
 
+import java.net.CookieManager;
 import java.util.logging.Logger;
 
 import org.spongepowered.api.Game;
@@ -23,6 +24,11 @@ public class main {
 
 	// Ahead is the code for the servercore chatbot
 
+
+	
+	
+	
+	
 	@SuppressWarnings("unused")
 	@Subscribe
 	public void onChatEvent(AsyncPlayerChatEvent event) {
@@ -63,19 +69,19 @@ public class main {
 							"What what happened Why are you yelling at me! Siriously take it up with the admin not the chatbot!");
 		} else if (message.contains("servercore")) {
 			player.sendMessage("Servercore version 0.5");
-
+         
 		}
 
 	}
 
 	@Subscribe
-	public void chatbo32214t2t(ServerStoppingEvent event) {
+	public void Stopevent(ServerStoppingEvent event) {
 		event.getGame().broadcastMessage("Great you broke it!");
 
 	}
 
 	@Subscribe
-	public void chatbo4264323532534513551614t2t(ServerStartingEvent event) {
+	public void Logger(ServerStartingEvent event) {
 
 		logger.info("Loading...");
 		logger.info("[ServerCore] Running try events");
@@ -86,14 +92,9 @@ public class main {
 	}
 
 	@Subscribe
-	public void chatbo426432353253451355161dfg4t2t(PreInitializationEvent event) {
+	public void gameevent(PreInitializationEvent event) {
 
 		game = event.getGame();
-
-	}
-
-	@Subscribe
-	public void chatbo426432353q6432534513551614t2t(EntitySpawnEvent event) {
 
 	}
 
@@ -104,7 +105,7 @@ public class main {
 	}
 
 	@Subscribe
-	public void onDisab234le(ServerStartedEvent event) {
+	public void Servercore(ServerStartedEvent event) {
 
 		if (game.getPluginManager().getPlugins().contains("ServerCore"))
 			;
