@@ -1,0 +1,3 @@
+include 'sponge'
+
+rootProject.name = 'Servercore'
