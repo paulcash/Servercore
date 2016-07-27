@@ -83,11 +83,13 @@ public class main {
 	@Subscribe
 	public void Logger(ServerStartingEvent event) {
 
-		logger.info("Loading...");
-		logger.info("[ServerCore] Running try events");
-		logger.info("[Servercore] Version 1.0 has found sponge version: "
-				+ event.getGame().getAPIVersion() + " Trying to hook in...");
-		logger.info("[Servercore] API  Has hooked in to sponge");
+		logger.info("")
+		logger.info("")
+		logger.info("")
+		logger.info("")
+		logger.info("")
+		logger.info("")
+		logger.info("")
 
 	}
 
