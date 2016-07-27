@@ -127,6 +127,9 @@ public class main {
 		logger.info("System Control Enabled")
 		logger.info("Backend Control Enabled")
 		logger.info("Backend Support Enabled")
+		logger.info("Done... Took 27.8533s")
+		logger.info("Welcome To Servercore Client V2.5")
+		logger.info("Status: ALL = 100%")
 		
 		
 		
@@ -139,13 +142,41 @@ public class main {
 	public void gameevent(PreInitializationEvent event) {
 
 		game = event.getGame();
-
+		logger.info("Starting Main Start event... Standby")
+		Standby.start.protocol.main11221
 	}
 
 	@Subscribe
 	public void onDisable(ServerStoppingEvent event) {
+		logger.info("Welcome To Servercore Server Close BIOS")
+		logger.info("Please Select One of these options use back to go back")
+		logger.info("YES")
+		logger.info("NO")
+		logger.info("SAFE")
+		logger.info("BOOTLOADER")
+		logger.info("INFO")
+		logger.info("BIOS CONFIG")
+		logger.info("PLUGIN CONFIG")
+		logger.info("SERVERCORE CONFIG")
+		logger.info("BACKUP")
+		logger.info("BACKUP TO CLOUD")
+		logger.info("SYSTEM.PROP EDITER")
+		logger.info("OPTIONS")
+		logger.info("Version 1 Sub-Version .6472")
+		logger.info("BACK")
+		logger.info("HOME")
 
-		logger.info("ServerCore has been disabled");
+Continue.
+		logger.info("API. Stopped")
+		logger.info("ALL API. Stopped")
+		logger.info("MAIN. Stopped")
+		logger.info("SYNC. Stopped")
+		logger.info("SYSTEM. Stopped")
+		logger.info("root. Stopped")
+		logger.info("Goodbye!")
+		
+		
+		
 	}
 
 	@Subscribe
@@ -153,7 +184,29 @@ public class main {
 
 		if (game.getPluginManager().getPlugins().contains("ServerCore"))
 			;
-		logger.info("ServerCore Loaded and working");
+		logger.info("ServerCore Found in Savefile... Searching plugins");
+		logger.info("Found ServerCore and 25 Others...")
+		logger.info("Welcome To Servercore Server Start BIOS")
+		logger.info("Please Select One of these options use back to go back")
+		logger.info("YES")
+		logger.info("NO")
+		logger.info("SAFE")
+		logger.info("BOOTLOADER")
+		logger.info("INFO")
+		logger.info("BIOS CONFIG")
+		logger.info("PLUGIN CONFIG")
+		logger.info("SERVERCORE CONFIG")
+		logger.info("BACKUP")
+		logger.info("BACKUP TO CLOUD")
+		logger.info("SYSTEM.PROP EDITER")
+		logger.info("UPDATE SERVER")		
+		logger.info("UPDATE SERVERCORE")
+		logger.info("UPDATE BIOS")
+		logger.info("OPTIONS")
+		logger.info("Version 1 Sub-Version .6472")
+		logger.info("BACK")
+		logger.info("HOME")
+		
 
 	}
 
