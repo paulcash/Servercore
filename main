@@ -82,14 +82,56 @@ public class main {
 
 	@Subscribe
 	public void Logger(ServerStartingEvent event) {
-
-		logger.info("")
-		logger.info("")
-		logger.info("")
-		logger.info("")
-		logger.info("")
-		logger.info("")
-		logger.info("")
+                 plugin.start.confirm
+                 logger.info("root. Starting Protocol.apimerge")
+                 logger.info("root. Starting Protocol.ApiLoad")
+                 logger.info("API. Pre-Init Starting... Please Wait")
+                 logger.info("API. Pre-Init Finished... Standby")
+                 logger.info("API. Init Starting... Please Wait")
+                 logger.info("API. Init Finished (if.else.fail.="NO") Yes... Standby")
+                 logger.info("API. Status = 100% - Dump? YES, Init? YES, Pre-Init Fail? NO")
+                 logger.info("Current Status. Status = 30%, Dump? 40%, Init? 35%, Pre-Init? 40%, Core Dumps? 50%")
+                 logger.info("Status... ALL Api's Merged ;Status=100%; Standby")
+                 logger.info("root. Starting protocol.mainload")
+		logger.info("MAIN. Pre-Init Starting... Please Wait")
+		logger.info("MAIN. Pre-Init Finished... Standby")
+		logger.info("MAIN. Init Starting... Please Wait")
+		logger.info("MAIN. Init Finished (if.else.fail.=NO") Yes... Standby")
+		logger.info("root. Confirming Load... %:2 Failed... Please Wait")
+		logger.info("root. Standby....")
+		logger.info("root. Starting Protocol.apisync")
+		logger.info("APISYNC. Finished 100%")
+		logger.info("root. Starting Protocol.LatchGame")
+		logger.info("LATGAME. Starting Latching... Standby")
+		logger.info("LATGAME. Finished. >99%:... Standby")
+		logger.info("root. Starting Lines 60,000 < ... Standby")
+		logger.info("LOAD. Fully Loaded >99% ")
+		logger.info("Main API Fully loaded and working... Standby")
+		logger.info("ALL API's Fully Loaded And Working... Standby")
+		logger.info("Main Plugin Fully Loaded And working... Standby")
+		logger.info("rootcheck = 1")
+		logger.info("Confirmed. Plugin and all assets Fully loaded and working")
+		logger.info("Hello World!")
+		logger.info("That took Approx. 21.738s")
+		logger.info("Logging Started")
+		logger.info("User control Enabled")
+		logger.info("Client Control Enabled")
+		logger.info("Spy Client Enabled")
+		logger.info("DRM Client Enabled")
+		logger.info("Main Core Enabled")
+		logger.info("ChatCommands v0.4 Enabled")
+		logger.info("All Interactions Enabled")
+		logger.info("...DONE 19 Interactions Found and hooked in")
+		logger.info("Fails = 0, Good = 19")
+		logger.info("MainClientPatcher Enabled")
+		logger.info("System Control Enabled")
+		logger.info("Backend Control Enabled")
+		logger.info("Backend Support Enabled")
+		
+		
+		
+		
+		
 
 	}
 
